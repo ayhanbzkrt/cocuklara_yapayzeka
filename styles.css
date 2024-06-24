@@ -1,0 +1,85 @@
+﻿body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+header.bg-custom {
+    background-color: #4CAF50; /* Daha modern bir yeşil ton */
+}
+
+footer.bg-custom {
+    background-color: #4CAF50; /* Aynı yeşil tonu kullanılıyor */
+}
+
+.badge-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.badge-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.completed-badge {
+    background-color: #f0ad4e !important;
+}
+
+.list-group-item {
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #e9ecef;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Farklı renklerde rozetler */
+#badge-python.completed-badge {
+    background-color: #ffcc00 !important;
+}
+
+#badge-veri.completed-badge {
+    background-color: #ff6666 !important;
+}
+
+#badge-matematik.completed-badge {
+    background-color: #6699ff !important;
+}
+
+#badge-kosul.completed-badge {
+    background-color: #66ff66 !important;
+}
+
+#badge-dongu.completed-badge {
+    background-color: #ffcc00 !important;
+}
+
+#badge-fonksiyon.completed-badge {
+    background-color: #ff9966 !important;
+}
+
+#badge-liste.completed-badge {
+    background-color: #cc66ff !important;
+}
+
+#badge-sinif.completed-badge {
+    background-color: #66ccff !important;
+}
+
+#badge-arguman.completed-badge {
+    background-color: #ff66b2 !important;
+}
+
+#badge-ileri-liste.completed-badge {
+    background-color: #66ffcc !important;
+}
+
+
+
+
+
+
