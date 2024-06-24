@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çocuklar İçin Yapay Zekâ</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light">
+    <header class="bg-custom text-white text-center p-4">
+        <h1 class="display-4">Çocuklar İçin Yapay Zekâ</h1>
+    </header>
+    <main class="container mt-4">
+        <section id="story" class="mb-5">
+            <h2 class="h4 font-weight-bold mb-3">Pixel ve Byte'ın Macerası</h2>
+            <p>Pixel ve Byte, Bilginova gezegeninin Bilgi Ormanı'nda bir maceraya atılıyorlar. Ormanda dolaşırken, Pixel farklı renklerdeki parlak meyveleri görüyor: bazıları kırmızı (integers), bazıları mavi (strings) ve diğerleri yeşil (floats). Byte, her meyvenin farklı bir "veri tipi" olduğunu açıklıyor.</p>
+        </section>
+        <section id="badges" class="mb-5">
+            <h2 class="h4 font-weight-bold mb-3">Rozetler</h2>
+            <div class="row">
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="badge-card text-center p-3 bg-white shadow rounded" id="badge-python" onclick="showBadgeInfo('python')">
+                        <i class="fas fa-calculator fa-3x text-primary mb-2"></i>
+                        <h5 class="h6">Python Başlangıç Rozeti</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="badge-card text-center p-3 bg-white shadow rounded" id="badge-veri" onclick="showBadgeInfo('veri')">
+                        <i class="fas fa-database fa-3x text-primary mb-2"></i>
+                        <h5 class="h6">Veri Tipleri Rozeti</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="badge-card text-center p-3 bg-white shadow rounded" id="badge-matematik" onclick="showBadgeInfo('matematik')">
+                        <i class="fas fa-calculator fa-3x text-primary mb-2"></i>
+                        <h5 class="h6">Matematik Rozeti</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="badge-card text-center p-3 bg-white shadow rounded" id="badge-kosul" onclick="showBadgeInfo('kosul')">
+                        <i class="fas fa-random fa-3x text-primary mb-2"></i>
+                        <h5 class="h6">Koşullu İfadeler Rozeti</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="badge-card text-center p-3 bg-white shadow rounded" id="badge-dongu" onclick="showBadgeInfo('dongu')">
+                        <i class="fas fa-sync fa-3x text-primary mb-2"></i>
+                        <h5 class="h6">Döngüler Rozeti</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="badge-card text-center p-3 bg-white shadow rounded" id="badge-fonksiyon" onclick="showBadgeInfo('fonksiyon')">
+                        <i class="fas fa-cogs fa-3x text-primary mb-2"></i>
+                        <h5 class="h6">Fonksiyonlar Rozeti</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="badge-card text-center p-3 bg-white shadow rounded" id="badge-liste" onclick="showBadgeInfo('liste')">
+                        <i class="fas fa-list fa-3x text-primary mb-2"></i>
+                        <h5 class="h6">Listeler Rozeti</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="badge-card text-center p-3 bg-white shadow rounded" id="badge-sinif" onclick="showBadgeInfo('sinif')">
+                        <i class="fas fa-object-group fa-3x text-primary mb-2"></i>
+                        <h5 class="h6">Sınıflar Rozeti</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="badge-card text-center p-3 bg-white shadow rounded" id="badge-arguman" onclick="showBadgeInfo('arguman')">
+                        <i class="fas fa-puzzle-piece fa-3x text-primary mb-2"></i>
+                        <h5 class="h6">Fonksiyon Argümanları Rozeti</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="badge-card text-center p-3 bg-white shadow rounded" id="badge-ileri-liste" onclick="showBadgeInfo('ileriListe')">
+                        <i class="fas fa-list-alt fa-3x text-primary mb-2"></i>
+                        <h5 class="h6">İleri Seviye Listeler Rozeti</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="activities" class="mb-5">
+            <h2 class="h4 font-weight-bold mb-3">Etkinlikler</h2>
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Python Başlangıç Etkinliği
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>Bu etkinlikte temel Python veri tiplerini öğreneceksiniz.</p>
+                            <pre id="code1">
+sayi = 5
+print("Tam Sayı:", sayi)
+isim = "Pixel"
+print("Metin:", isim)
+ondalik = 3.14
+print("Ondalıklı Sayı:", ondalik)
+                            </pre>
+                            <button class="btn btn-primary" onclick="runCode('code1', 'output1')">Kodu Çalıştır</button>
+                            <button class="btn btn-success mt-2" onclick="completeTask('python')">Görevi Tamamla</button>
+                            <div id="output1" class="output mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Değişkenler ve Print Fonksiyonu
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>Değişkenleri tanımlayın ve print fonksiyonunu kullanarak ekrana yazdırın.</p>
+                            <pre id="code2">
+agac = "Yeşil Ağaç"
+print("Değişken:", agac)
+hayvan = "Tavşan"
+bitki = "Meşe Ağacı"
+print("Hayvan:", hayvan)
+print("Bitki:", bitki)
+                            </pre>
+                            <button class="btn btn-primary" onclick="runCode('code2', 'output2')">Kodu Çalıştır</button>
+                            <button class="btn btn-success mt-2" onclick="completeTask('veri')">Görevi Tamamla</button>
+                            <div id="output2" class="output mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Matematiksel İşlemler ve Mantıksal Operatörler
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>Toplama, çarpma ve mantıksal operatörleri öğrenin.</p>
+                            <pre id="code3">
+toplam = 5 + 3
+print("Toplama İşlemi Sonucu:", toplam)
+carpma = 4 * 2
+print("Çarpma İşlemi Sonucu:", carpma)
+bolme = 8 / 2
+print("Bölme İşlemi Sonucu:", bolme)
+print("5 büyük müdür 3'ten?", 5 > 3)
+                            </pre>
+                            <button class="btn btn-primary" onclick="runCode('code3', 'output3')">Kodu Çalıştır</button>
+                            <button class="btn btn-success mt-2" onclick="completeTask('matematik')">Görevi Tamamla</button>
+                            <div id="output3" class="output mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Koşullu İfadeler ve Karar Verme
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>Koşullu ifadeler kullanarak kararlar alın.</p>
+                            <pre id="code4">
+yol = "sol"
+if yol == "sol":
+    print("Sol yolu seçtiniz!")
+elif yol == "sağ":
+    print("Sağ yolu seçtiniz!")
+else:
+    print("Bilinmeyen bir yol seçtiniz.")
+                            </pre>
+                            <button class="btn btn-primary" onclick="runCode('code4', 'output4')">Kodu Çalıştır</button>
+                            <button class="btn btn-success mt-2" onclick="completeTask('kosul')">Görevi Tamamla</button>
+                            <div id="output4" class="output mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFive">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Döngüler ve Tekrarlanan Görevler
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>While ve for döngüleri kullanarak tekrarlanan görevleri yapın.</p>
+                            <pre id="code5">
+adim = 0
+while adim < 5:
+    print("Labirentte ilerliyoruz, adım:", adim)
+    adim += 1
+
+for i in range(5):
+    print("Labirentte adım:", i)
+                            </pre>
+                            <button class="btn btn-primary" onclick="runCode('code5', 'output5')">Kodu Çalıştır</button>
+                            <button class="btn btn-success mt-2" onclick="completeTask('dongu')">Görevi Tamamla</button>
+                            <div id="output5" class="output mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingSix">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Fonksiyonlar ve Modülerlik
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>Fonksiyonlar tanımlayın ve kullanın.</p>
+                            <pre id="code6">
+def gizem_coz(gizem):
+    print(gizem, "çözüldü!")
+
+gizem_coz("Labirentin Gizemi")
+
+def gorev_yap(gorev, kisi):
+    print(gorev, kisi, "yapıyor!")
+
+gorev_yap("Labirentin Gizemi", "Pixel")
+gorev_yap("Bilgi Ormanı", "Byte")
+                            </pre>
+                            <button class="btn btn-primary" onclick="runCode('code6', 'output6')">Kodu Çalıştır</button>
+                            <button class="btn btn-success mt-2" onclick="completeTask('fonksiyon')">Görevi Tamamla</button>
+                            <div id="output6" class="output mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingSeven">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                Listeler ve Diziler
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>Listeler oluşturun ve üzerlerinde işlemler yapın.</p>
+                            <pre id="code7">
+bilgiler = ["Yıldızlar", "Galaksiler", "Uzay Gemileri"]
+print("İlk bilgi:", bilgiler[0])
+print("Tüm bilgiler:", bilgiler)
+
+for bilgi in bilgiler:
+    print("Bilgi:", bilgi)
+                            </pre>
+                            <button class="btn btn-primary" onclick="runCode('code7', 'output7')">Kodu Çalıştır</button>
+                            <button class="btn btn-success mt-2" onclick="completeTask('liste')">Görevi Tamamla</button>
+                            <div id="output7" class="output mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingEight">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                Sınıflar ve Nesne Yönelimli Programlama
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>Sınıflar tanımlayın ve nesne yönelimli programlamayı öğrenin.</p>
+                            <pre id="code8">
+class Robot:
+    def __init__(self, isim):
+        self.isim = isim
+    def selamla(self):
+        print("Merhaba, ben", self.isim)
+
+pixel_robot = Robot("Pixel")
+pixel_robot.selamla()
+
+class TemizlikRobotu(Robot):
+    def temizle(self):
+        print(self.isim, "temizlik yapıyor.")
+
+temizlik_robotu = TemizlikRobotu("Byte")
+temizlik_robotu.selamla()
+temizlik_robotu.temizle()
+                            </pre>
+                            <button class="btn btn-primary" onclick="runCode('code8', 'output8')">Kodu Çalıştır</button>
+                            <button class="btn btn-success mt-2" onclick="completeTask('sinif')">Görevi Tamamla</button>
+                            <div id="output8" class="output mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingNine">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                Fonksiyon Argümanları ve Return İfadesi
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>Fonksiyonlara argümanlar geçin ve return ifadesini kullanın.</p>
+                            <pre id="code9">
+def toplama(sayi1, sayi2):
+    return sayi1 + sayi2
+
+sonuc = toplama(3, 5)
+print("Toplama sonucu:", sonuc)
+                            </pre>
+                            <button class="btn btn-primary" onclick="runCode('code9', 'output9')">Kodu Çalıştır</button>
+                            <button class="btn btn-success mt-2" onclick="completeTask('arguman')">Görevi Tamamla</button>
+                            <div id="output9" class="output mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTen">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                Listeler ve İleri Seviye İşlemler
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>Listeler üzerinde ileri seviye işlemler yapın.</p>
+                            <pre id="code10">
+renkler = ["mavi", "kırmızı", "yeşil", "sarı"]
+renkler.sort()
+print("Sıralı renkler:", renkler)
+
+en_sevdigim = renkler[0]
+print("En sevdiğim renk:", en_sevdigim)
+
+bilgiler = ["Yıldızlar", "Galaksiler", "Uzay Gemileri"]
+bilgiler.append("Kara Delikler")
+print("Yeni Bilgiler:", bilgiler)
+
+bilgiler.remove("Yıldızlar")
+print("Güncellenmiş Bilgiler:", bilgiler)
+                            </pre>
+                            <button class="btn btn-primary" onclick="runCode('code10', 'output10')">Kodu Çalıştır</button>
+                            <button class="btn btn-success mt-2" onclick="completeTask('ileriListe')">Görevi Tamamla</button>
+                            <div id="output10" class="output mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="progress" class="mb-5">
+            <h2 class="h4 font-weight-bold mb-3">İlerleme</h2>
+            <div id="progress-bar" class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-custom text-white text-center p-3">
+        <p>&copy; 2024 Ayhan Bozkurt</p>
+        <p>Ankara, Türkiye | Tüm Hakları Saklıdır: Ayhan Bozkurt</p>
+        <p>Email: <a href="mailto:ayhanbzkrt@gmail.com" class="text-white">ayhanbzkrt@gmail.com</a></p>
+        <p>Github: <a href="https://github.com/ayhanbzkrt" class="text-white">Github</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/ayhanbozkurt/" class="text-white">LinkedIn</a></p>
+        <p>Medium: <a href="https://medium.com/@ayhanbzkrt" class="text-white">Medium</a></p>
+        <p>Itch.io: <a href="https://ayhanbzkrt.itch.io/" class="text-white">Itch.io</a></p>
+    </footer>
+    <div class="modal fade" id="badgeModal" tabindex="-1" role="dialog" aria-labelledby="badgeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="badgeModalLabel">Rozet Bilgisi</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Kapat">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="badgeModalBody">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="completionModal" tabindex="-1" role="dialog" aria-labelledby="completionModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="completionModalLabel">Tebrikler!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Kapat">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="completionModalBody">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skulpt/dist/skulpt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skulpt/dist/skulpt-stdlib.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
