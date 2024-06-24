@@ -1,5 +1,6 @@
-﻿body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+/* Genel ayarlar */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Daha okunabilir bir font ailesi */
 }
 
 header.bg-custom {
@@ -77,6 +78,7 @@ footer a {
 #badge-ileri-liste.completed-badge {
     background-color: #66ffcc !important;
 }
+
 
 
 
